@@ -7,7 +7,7 @@ const smartestchatbot = require('smartestchatbot')
 const delay = require("delay")
 const scb = new smartestchatbot.Client()
 client.on('ready', () => {
-  let channel = client.channels.cache.get("822055562325000223")
+  let channel = client.channels.cache.get("YOUR VC ID")
 channel.join()
 
 console.log(`Logged in as ${client.user.tag}!`);
@@ -17,7 +17,7 @@ console.log(`Logged in as ${client.user.tag}!`);
 
 client.on("message", async message => {
  
-if(message.author.id === "788759748245192724"){
+if(message.author.id === "YOUR ID"){
 
     if(message.content === "hi")
    return  message.channel.send("hello").then((m)=> m.delete({timeout : 1000}))
@@ -26,7 +26,7 @@ if(message.author.id === "788759748245192724"){
 
 
 
-  if (message.author.id== "844104468529807370") {
+  if (message.author.id== "YOUR ID") {
   
     if (message.author.bot) return;
     if(message.author == client.user ) return
@@ -34,7 +34,7 @@ if(message.author.id === "788759748245192724"){
     message.channel.startTyping();
     await delay(12000)
     
-    scb.chat({message: message.content, name: client.user.username, owner:"surbhi", user: message.author.id, language:"en"}).then(reply => {
+    scb.chat({message: message.content, name: client.user.username, owner:"HJ", user: message.author.id, language:"en"}).then(reply => {
     if(reply.lenght < 50) return
   //  message.channel.send(`${reply}`);
     })
@@ -44,4 +44,4 @@ if(message.author.id === "788759748245192724"){
 
 //----------
 
-client.login(process.env.Hj);
+client.login("YOUR ACCOUNT TOKEN");
